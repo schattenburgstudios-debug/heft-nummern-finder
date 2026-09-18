@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heft-Nummern-Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="badge">📘</div>
+      <h1>Heft-Nummern-Finder</h1>
+      <p>Finde anhand der Eigenschaften deines Heftes die passende Lineatur.</p>
+    </header>
+
+    <section class="card">
+      <h2>1. Heftart</h2>
+      <div class="options" id="artOptions">
+        <button class="option" data-field="art" data-value="liniert">Liniert</button>
+        <button class="option" data-field="art" data-value="kariert">Kariert</button>
+        <button class="option" data-field="art" data-value="blanko">Blanko / Sonderform</button>
+      </div>
+
+      <div id="dynamicOptions"></div>
+
+      <div class="actions">
+        <button id="findBtn" class="primary">Heftnummer finden</button>
+        <button id="resetBtn" class="secondary">Zurücksetzen</button>
+      </div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <p class="result-label">Passende Lineatur</p>
+      <div id="number" class="number">–</div>
+      <h2 id="resultTitle">–</h2>
+      <p id="resultDescription">–</p>
+      <button id="copyBtn" class="copy">Nummer kopieren</button>
+    </section>
+
+    <p id="error" class="error hidden"></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
